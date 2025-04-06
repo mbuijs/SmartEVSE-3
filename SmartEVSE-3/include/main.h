@@ -361,10 +361,10 @@
 #define EM_EASTRON1P 10
 #define EM_FINDER_7M 11
 #define EM_SINOTIMER 12
-#define EM_UNUSED_SLOT1 13
-#define EM_UNUSED_SLOT2 14
-#define EM_UNUSED_SLOT3 15
-#define EM_UNUSED_SLOT4 16
+#define EM_ABB_EV3 13
+#define EM_UNUSED_SLOT1 14
+#define EM_UNUSED_SLOT2 15
+#define EM_UNUSED_SLOT3 16
 #define EM_CUSTOM 17
 
 typedef enum mb_datatype {

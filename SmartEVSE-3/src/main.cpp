@@ -2611,6 +2611,7 @@ void requestEnergyMeasurement(uint8_t Meter, uint8_t Address, bool Export) {
             // - Sinotimer uses 16-bit values, except for this measurement it uses 32bit int format
             // fallthrough
         case EM_ABB:
+        case EM_ABB_EV3:
             // Note:
             // - ABB uses 64bit values for this register (size 2)
             Count = 2;
@@ -2770,6 +2771,7 @@ void ModbusRequestLoop() {
                             case EM_EASTRON3P:
                             case EM_EASTRON3P_INV:
                             case EM_ABB:
+                            case EM_ABB_EV3:
                             case EM_FINDER_7M:
                                 updated = 0;
                                 break;
@@ -5322,7 +5324,7 @@ void setup() {
    
     // Uart 1 is used for Modbus @ 9600 8N1
     RTUutils::prepareHardwareSerial(Serial1);
-    Serial1.begin(MODBUS_BAUDRATE, SERIAL_8N1, PIN_RS485_RX, PIN_RS485_TX);
+    Serial1.begin(MODBUS_BAUDRATE, SERIAL_8E1, PIN_RS485_RX, PIN_RS485_TX);
 
    
     //Check type of calibration value used to characterize ADC
